@@ -1,0 +1,328 @@
+@import 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,500';
+@import 'normalize.scss';
+
+body {
+  font-size: 14px;
+  line-height: 1.5;
+  font-family: "Open Sans", "Helvetica", "Arial", sans-serif;
+  color: #566b78;
+}
+
+
+
+main {
+  padding: 0 2em;
+  margin: 0 auto;
+
+  &.content{
+      width: 950px;
+      margin-left:auto;
+  }
+}
+
+a {
+  color: #e81c4f;
+}
+
+h1, h2, strong {
+  color: #333;
+
+}
+
+.text-center{
+  text-align:center;
+}
+
+h2 {
+  margin-top: 1em;
+  padding-top: 1em;
+}
+
+header {
+  background-color: #263d36;
+  background-image: url("../images/porto.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  line-height: 1.2;
+  padding: 2vw 2em;
+  text-align: center;
+}
+
+header h1 {
+  color: white;
+  font-size: 2.5em;
+  font-weight: 300;
+}
+
+header p {
+  color: white;
+  font-size: 0.6em;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+input[type="text"] {
+  padding: 6px 14px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+
+  &:focus {
+    border-color: #66afe9;
+    outline: 0;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
+  }
+}
+
+input[type="text"].error {
+  color: #db2828;
+  border-color: #db2828;
+
+  &::-webkit-input-placeholder {
+    color: #db2828;
+  }
+  &::-moz-placeholder {
+    color: #db2828;
+  }
+  &:-ms-input-placeholder {
+    color: #db2828;
+  }
+}
+
+input[type="button"] {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  padding: 6px 14px;
+  background-color: #1d7cf4;
+  line-height: 1.42857143;
+  border: 1px solid transparent;
+  color: #fff;
+  font-size: 14px;
+  font-weight: normal;
+  border-radius: 2px;
+  outline: 0 !important;
+  transition: all .35s cubic-bezier(.25, .25, .315, 1.35);
+
+  &:hover,
+  &:focus {
+    background-color: #155CB3;
+  }
+}
+
+.form {
+  margin: 1em 0;
+  text-align:center;
+
+}
+
+.day {
+  display: inline-block; 
+  color:white;
+  padding:20px; 
+  text-align: center;
+  border: 1px solid #bbcceb;
+  margin: 10px;
+  background-color: #375f92;
+  -webkit-box-shadow: 0px 1px 10px 0px rgba(207,207,207,1);
+  -moz-box-shadow: 0px 1px 10px 0px rgba(207,207,207,1);
+  box-shadow: 0px 1px 10px 0px rgba(207,207,207,1);
+
+  .date{  
+    color:white;
+      h3{
+        font-size:1.3rem;
+        font-weight:bold;
+        text-transform: uppercase;
+      }
+  }
+}
+
+
+/* ICONS WEATHER*/
+@font-face {
+  font-family: "iconvault";
+  src: url("/images/icons/iconvault_forecastfont.eot");
+  src: url("/images/icons/iconvault_forecastfont.eot?#iefix") format("embedded-opentype"),
+       url("/images/icons/iconvault_forecastfont.woff") format("woff"),
+       url("/images/icons/iconvault_forecastfont.ttf") format("truetype"),
+       url("/images/icons/iconvault_forecastfont.svg#iconvault") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  
+}
+
+
+.icon-night:before,
+.icon-sunny:before,
+.icon-frosty:before,
+.icon-windysnow:before,
+.icon-showers:before,
+.icon-basecloud:before,
+.icon-cloud:before,
+.icon-rainy:before,
+.icon-mist:before,
+.icon-windysnowcloud:before,
+.icon-drizzle:before,
+.icon-snowy:before,
+.icon-sleet:before,
+.icon-moon:before,
+.icon-windyrain:before,
+.icon-hail:before,
+.icon-sunset:before,
+.icon-windyraincloud:before,
+.icon-sunrise:before,
+.weather-icon-32:before,
+.icon-thunder:before,
+.icon-windy:before {
+  font-family: "iconvault";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  text-decoration: inherit;
+  font-size:42px;
+}
+
+.weather-icon-0:before,
+.weather-icon-1:before,
+.weather-icon-2:before,
+.weather-icon-3:before,
+.weather-icon-4:before,
+.weather-icon-5:before,
+.weather-icon-6:before,
+.weather-icon-7:before,
+.weather-icon-8:before,
+.weather-icon-9:before,
+.weather-icon-10:before,
+.weather-icon-11:before,
+.weather-icon-12:before,
+.weather-icon-13:before,
+.weather-icon-14:before,
+.weather-icon-15:before,
+.weather-icon-16:before,
+.weather-icon-17:before,
+.weather-icon-18:before,
+.weather-icon-19:before,
+.weather-icon-21:before,
+.weather-icon-22:before,
+.weather-icon-23:before,
+.weather-icon-24:before,
+.weather-icon-25:before,
+.weather-icon-26:before,
+.weather-icon-27:before,
+.weather-icon-28:before,
+.weather-icon-29:before,
+.weather-icon-30:before,
+.weather-icon-31:before,
+.weather-icon-32:before,
+.weather-icon-33:before,
+.weather-icon-34:before,
+.weather-icon-35:before,
+.weather-icon-36:before,
+.weather-icon-37:before,
+.weather-icon-38:before,
+.weather-icon-39:before,
+.weather-icon-40:before,
+.weather-icon-42:before,
+.weather-icon-42:before,
+.weather-icon-43:before,
+.weather-icon-44:before,
+.weather-icon-45:before,
+.weather-icon-46:before,
+.weather-icon-47:before,
+.weather-icon-3200:before{
+  font-family: "iconvault";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  text-decoration: inherit;
+  font-size:42px;
+}
+
+
+.weather-icon-0:before{display:none;}
+.weather-icon-1:before{content: "\f114";}
+.weather-icon-2:before{content: "\f114";}
+.weather-icon-3:before{content: "\f114";}
+.weather-icon-4:before{content: "\f114";}
+.weather-icon-5:before{content: "\f107";}
+.weather-icon-6:before{content: "\f107";}
+.weather-icon-7:before{content: "\f109"; }
+.weather-icon-8:before{content: "\f10a"}
+.weather-icon-9:before{content: "\f10a"}
+.weather-icon-10:before{content: "\f107";}
+.weather-icon-11:before{content: "\f104";}
+.weather-icon-12:before{content: "\f104";}
+.weather-icon-13:before{content: "\f10b";}
+.weather-icon-14:before{content: "\f103";}
+.weather-icon-15:before{content: "\f103";}
+.weather-icon-16:before{content: "\f10b";}
+.weather-icon-17:before{content: "\f10f";}
+.weather-icon-18:before{content: "\f108";}
+.weather-icon-19:before{content: "\f108";}
+.weather-icon-20:before{content: "\f108";}
+.weather-icon-21:before{content: "\f108";}
+.weather-icon-22:before{content: "\f108";}
+.weather-icon-23:before{content: "\f108";}
+.weather-icon-24:before{content: "\f109";}
+.weather-icon-25:before{content: "\f102";}
+.weather-icon-26:before{content: "\f106";}
+.weather-icon-27:before{content: "\f106";}
+.weather-icon-28:before{content: "\f106";}
+.weather-icon-29:before{content: "\f100";}
+.weather-icon-30:before{content: "\f101";}
+.weather-icon-31:before{content: "\f10d";}
+.weather-icon-33:before{content: "\f100";}
+.weather-icon-34:before{content: "\f112";}
+.weather-icon-35:before{content: "\f107";}
+.weather-icon-36:before{content: "\f113"; }
+.weather-icon-37:before{content: "\f114";}
+.weather-icon-38:before{content: "\f114";}
+.weather-icon-39:before{content: "\f114";}
+.weather-icon-40:before{content: "\f104";}
+.weather-icon-41:before{content: "\f10b";}
+.weather-icon-42:before{content: "\f10b";}
+.weather-icon-43:before{content: "\f10b";}
+.weather-icon-44:before{content: "\f106";}
+.weather-icon-45:before{content: "\f114";}
+.weather-icon-46:before{content: "\f105";}
+.weather-icon-47:before{content: "\f114";}
+.weather-icon-3200:before{}
+
+
+.icon-night:before { content: "\f100"; }
+.icon-frosty:before { content: "\f102"; }
+.icon-windysnow:before { content: "\f103"; }
+.icon-showers:before { content: "\f104"; }
+.icon-basecloud:before { content: "\f105"; }
+.icon-cloud:before { content: "\f106"; }
+.icon-rainy:before { content: "\f107"; }
+.icon-mist:before { content: "\f108"; }
+.icon-windysnowcloud:before { content: "\f109"; }
+.icon-drizzle:before { content: "\f10a"; }
+.icon-snowy:before { content: "\f10b"; }
+.icon-sleet:before { content: "\f10c"; }
+.icon-moon:before { content: "\f10d"; }
+.icon-windyrain:before { content: "\f10e"; }
+.icon-hail:before { content: "\f10f"; }
+.icon-sunset:before { content: "\f110"; }
+.icon-windyraincloud:before { content: "\f111"; }
+.icon-sunrise:before { content: "\f112"; }
+.weather-icon-32:before { content: "\f113"; }
+.icon-thunder:before { content: "\f114"; }
+.icon-windy:before { content: "\f115"; }
