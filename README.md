@@ -9,6 +9,9 @@ Usage
 # clone repository
 git clone https://github.com/bonucci/BLIP-Js-Exercise.git
 
+# change directory
+cd BLIP-Js-Exercise
+
 # install dependencies
 npm install
 
